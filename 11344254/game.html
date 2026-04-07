@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我要玩遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="game">
+    <div class="site-shell">
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="開啟選單" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <aside class="sidebar" data-sidebar></aside>
+        <div class="clock-box" data-clock></div>
+
+        <main class="game-page" data-clicker-game>
+            <section class="game-scene">
+                <section class="game-side-panel">
+                    <h1 class="game-title">點點點</h1>
+                    <p class="game-intro">點擊亂跑的餅乾來累積分數!遊戲每局 30 秒，來突破自己的極限</p>
+
+                    <div class="game-stats-stack">
+                        <div class="game-stat-box">
+                            <span>目前分數</span>
+                            <strong data-score>0</strong>
+                        </div>
+                        <div class="game-stat-box">
+                            <span>剩餘時間</span>
+                            <strong data-time-left>30</strong>
+                        </div>
+                        <div class="game-stat-box">
+                            <span>最佳紀錄</span>
+                            <strong data-best-score>0</strong>
+                        </div>
+                    </div>
+
+                    <div class="game-actions">
+                        <button class="game-start-btn primary-btn" type="button" data-start-game>開始遊戲</button>
+                        <button class="game-reset-btn secondary-btn" type="button" data-reset-game>重來一次</button>
+                    </div>
+
+                    <ol class="game-tips">
+                        <li>按下開始後會進入 30 秒倒數</li>
+                        <li>每點到一次餅乾加 1 分</li>
+                        <li>遊戲結束後會保留最佳紀錄</li>
+                    </ol>
+                </section>
+
+                <section class="game-play-panel">
+                    <div class="game-room" data-clicker-area>
+                        <img class="game-room-image" src="image/game-room.png" alt="客廳場景">
+                        <div class="game-status-chip" data-game-status>按下開始遊戲</div>
+
+                        <button class="game-target" type="button" data-target aria-label="點擊餅乾">
+                            <span class="game-cookie"></span>
+                        </button>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

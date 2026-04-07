@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+    <div class="site-shell">
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="開啟選單" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <aside class="sidebar" data-sidebar></aside>
+        <div class="clock-box" data-clock></div>
+
+        <main class="page-frame hero-home">
+            <section class="home-image-stage" aria-label="首頁場景">
+                <img class="home-image" src="image/home-landing.png" alt="客廳首頁場景">
+
+                <button class="hotspot home-hotspot fish" type="button" data-link="fish.html" aria-label="前往魚缸頁">
+                    <span class="hotspot-label">魚兒魚兒水中游</span>
+                </button>
+
+                <button class="hotspot home-hotspot game" type="button" data-link="game.html" aria-label="前往小遊戲">
+                    <span class="hotspot-label">我要玩遊戲</span>
+                </button>
+
+                <button class="hotspot home-hotspot todo" type="button" data-link="todo.html" aria-label="前往待辦事項">
+                    <span class="hotspot-label">To Do List</span>
+                </button>
+
+                <button class="hotspot home-hotspot meal" type="button" data-meal-link aria-label="依時段前往選餐頁">
+                    <span class="hotspot-label">現在要吃什麼</span>
+                </button>
+
+                <button class="hotspot home-hotspot work" type="button" data-link="work.html" aria-label="前往工作頁">
+                    <span class="hotspot-label above">什麼時候下班</span>
+                </button>
+
+                <button class="hotspot home-hotspot relax" type="button" data-link="relax.html" aria-label="前往放鬆頁">
+                    <span class="hotspot-label">放鬆球球</span>
+                </button>
+            </section>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
