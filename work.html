@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>好想下班</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="work">
+    <div class="site-shell">
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="開啟選單" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <aside class="sidebar" data-sidebar></aside>
+        <div class="clock-box" data-clock></div>
+
+        <main class="work-page" data-work-app>
+            <section class="work-dashboard is-idle" data-work-dashboard>
+                <div class="work-image-stage">
+                    <img class="work-image" src="image/work-desk.png" alt="工作桌面">
+                    <div class="work-top-strip" data-work-top-strip>
+                        <div class="work-top-stats">
+                            <div class="work-big-stat" data-remaining-display>再過 0 小時 0 分鐘就可以下班啦</div>
+                            <div class="work-big-stat" data-earned-display>今天已經賺到了 0 元</div>
+                        </div>
+                    </div>
+                    <button class="work-reset-btn" type="button" data-work-reset aria-label="重新計算">重新計算</button>
+                    <div class="work-minute-gain" data-minute-gain>+ 0</div>
+                    <button class="work-screen-hotspot" type="button" data-open-work-setup aria-label="開啟工作設定"></button>
+                </div>
+            </section>
+
+            <section class="work-setup-modal" data-work-setup hidden>
+                <div class="work-setup-backdrop" data-close-work-setup></div>
+                <div class="work-setup-panel">
+                    <h1>增加一下上班動力吧</h1>
+                    <form class="work-form-card" data-work-form>
+                        <div class="work-form-row">
+                            <label for="hourlyWage">時薪</label>
+                            <input class="work-pill-input" id="hourlyWage" name="hourlyWage" type="number" min="0" step="1" required>
+                        </div>
+                        <div class="work-form-row">
+                            <label for="startTime">幾點開始上班</label>
+                            <input class="work-pill-input" id="startTime" name="startTime" type="time" required>
+                        </div>
+                        <div class="work-form-row">
+                            <label for="endTime">幾點下班</label>
+                            <input class="work-pill-input" id="endTime" name="endTime" type="time" required>
+                        </div>
+                        <div class="work-setup-actions">
+                            <button class="work-reset-inline-btn secondary-btn" type="button" data-work-reset-inline>重置</button>
+                            <button class="work-start-btn primary-btn" type="submit">開始計算</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
